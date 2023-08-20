@@ -73,7 +73,7 @@ alert("Hi, Victoria!");
 // // Tasks: Conditions
 // // 1) Запитати змінну у користувача. Якщо змінна дорівнює числу 10, виведіть 'Вірно', інакше виведіть 'Невірно'.
 
-const userVariable = prompt("How much is 5x2 ?");
+const userVariable = +prompt("How much is 5x2 ?");
 if (userVariable === 10) {
   console.log("That`s right");
 } else {
@@ -102,14 +102,14 @@ if (test) {
 // // 3) Обчислити суму покупки з урахуванням знижки. Знижка 3% надається, якщо сума покупки більша за 500 грн.,
 // // а знижка 5% - якщо сума покупки більша за 800 грн. Суму покупки вводить користувач.
 
-const userPurchase = prompt("Your purchase amount:");
+const userPurchase = +prompt("Your purchase amount:");
 let userDiscount;
 let userNewAmount;
-if (userPurchase >= 500 && userPurchase < 800) {
+if (userPurchase > 500 && userPurchase <= 800) {
   userDiscount = (userPurchase * 3) / 100;
   userNewAmount = userPurchase - userDiscount;
   alert("You`re got a 3% discount! Now your purchace is " + userNewAmount);
-} else if (userPurchase >= 800) {
+} else if (userPurchase > 800) {
   userDiscount = (userPurchase * 5) / 100;
   userNewAmount = userPurchase - userDiscount;
   alert("You`re got a 5% discount! Now your purchace is " + userNewAmount);
@@ -156,3 +156,23 @@ do {
   }
   firstNumber++;
 } while (firstNumber <= LAST_ONE_NUMBER);
+
+// 3) *Знайти суму чисел в межах від 1 до 100.
+
+let sum = 0;
+oneNumber = 1;
+endNumber = 100;
+while (oneNumber <= endNumber) {
+  sum += oneNumber;
+  oneNumber++;
+}
+console.log(sum);
+
+let sum1 = 0;
+oneNumber2 = 1;
+endNumber2 = 100;
+do {
+  sum1 += oneNumber2;
+  oneNumber2++;
+} while (oneNumber2 <= endNumber2);
+console.log(sum1);
