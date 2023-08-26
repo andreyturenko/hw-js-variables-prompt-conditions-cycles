@@ -52,7 +52,7 @@ alert(userSquareNumber * userSquareNumber);
 
 const userArithmeticMean1 = +prompt("Enter the first number:");
 const userArithmeticMean2 = +prompt("Enter the second number:");
-alert(userArithmeticMean1 + userArithmeticMean2 / 2);
+alert((userArithmeticMean1 + userArithmeticMean2) / 2);
 
 // // // 3) Перевести кількість хвилин на секунди та вивести результат. Число хвилин запитувати у користувача.
 
@@ -142,20 +142,18 @@ do {
 let startNumber = 10;
 const LAST_NUMBER = 50;
 while (startNumber <= LAST_NUMBER) {
-  if (startNumber % 5 === 0) {
-    console.log("Number output:", startNumber);
-  }
-  startNumber++;
+  console.log("Number output:", startNumber);
+  startNumber += 5;
 }
 
+let startNumber2 = 10;
+const LAST_NUMBER2 = 50;
 do {
-  if (startNumber % 5 === 0) {
-    console.log("Number output:", startNumber);
-  }
-  startNumber++;
-} while (startNumber <= LAST_NUMBER);
+  console.log("Number output:", startNumber2);
+  startNumber2 += 5;
+} while (startNumber2 <= LAST_NUMBER2);
 
-// 3) *Знайти суму чисел в межах від 1 до 100.
+// // // 3) *Знайти суму чисел в межах від 1 до 100.
 
 let sum = 0;
 oneNumber = 1;
